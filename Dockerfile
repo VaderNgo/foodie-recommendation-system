@@ -10,6 +10,8 @@ COPY . .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+ARG FOODIE_DATABASE_URL
+
 ENV FLASK_ENV=production
 
 #Use environment variable in Railway
