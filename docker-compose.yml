@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+    foodie-recommendation-system:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "5000:5000"
+        environment:
+            - FLASK_ENV=production
+            - SQLALCHEMY_DATABASE_URI=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DATABASE}
+        volumes:
+            - .:/app

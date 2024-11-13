@@ -1,0 +1,5 @@
+.env
+__pycache__/app.cpython-39.pyc
+__pycache__/app.cpython-38.pyc
+.venv/*
+__pycache__/*
