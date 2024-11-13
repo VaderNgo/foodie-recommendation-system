@@ -10,6 +10,11 @@ COPY . .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+ENV FLASK_ENV=production
+
+#Use environment variable in Railway
+ENV SQLALCHEMY_DATABASE_URI=${FOODIE_DATABASE_URL}
+
 # Expose the port the app runs on
 EXPOSE 5000
 
