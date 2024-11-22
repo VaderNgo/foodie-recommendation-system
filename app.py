@@ -141,7 +141,7 @@ def test_models():
         "restaurantReviews": [{"id": review.Id, "restaurantId": review.RestaurantId, "userId": review.UserId, "rating": review.Rating} for review in restaurant_reviews]
     })
 
-@app.route('/dish-recommended', methods=['GET'])
+@app.route('/recommended-dishes', methods=['GET'])
 def recommend_dishes():
     user_id = request.args.get('userId', type=str)
     n = request.args.get('n', default=10, type=int) 
@@ -162,7 +162,7 @@ def recommend_dishes():
     
     return jsonify(recommended_dish_ids)
 
-@app.route('/restaurant-recommended', methods=['GET'])
+@app.route('/recommended-restaurants', methods=['GET'])
 def recommend_restaurants():
     user_id = request.args.get('userId', type=str)
     n = request.args.get('n', default=10, type=int) 
