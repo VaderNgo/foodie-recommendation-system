@@ -45,8 +45,8 @@ The **Foodie Recommendation System** allows users to get personalized **dish** a
 
 ### 1. **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/foodie-recommendation.git
-cd foodie-recommendation
+git clone https://github.com/VaderNgo/foodie-recommendation-system.git
+cd foodie-recommendation-system
 ```
 
 ### 2. **Set Up Environment Variables**  
